@@ -1,0 +1,26 @@
+/*================================
+Resetting and Styling entire page
+=================================*/
+@import "./main-reset-styling";
+
+/*=======================
+Part 1 of the Assignment
+========================*/
+@import "./assignment-part1";
+@import "./mediaqueries-part1";
+
+/*=======================
+Part 2 of the Assignment
+========================*/
+@import "./assignment-part2";
+@import "./mediaqueries-part2";
+
+/*=======================
+Part 3 of the Assignment
+========================*/
+@import "./assignment-part3";
+@import "/scss/fontawesome.css";
+@import "/scss/solid.css";
+@import "/scss/brands.css";
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,200&display=swap');
+@import "./mediaqueries-part3";

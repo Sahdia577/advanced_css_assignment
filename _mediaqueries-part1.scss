@@ -1,0 +1,78 @@
+/*==========================
+Media Queries Tablet Part 1
+============================*/
+@media screen and (min-width: 768px) {
+    .testimonial {
+        width:100%;
+        width:768px;
+        height: 100%;
+        margin: auto;
+        flex-direction: column;
+        p{
+            font-size: 3rem;
+            margin-top: -2em;
+            margin-bottom: -8em;
+            margin-left: -1em;
+            margin-right: -1em;
+            padding: 4em;
+        }
+    }    
+    .image_testimonial {
+        width: 30%;
+        border-width: 8px;
+        transform: translateY(12em);
+    }    
+    .footer-testimonial {
+        max-width:768px;
+        height: 30em;   
+        p {
+            position: relative;
+            bottom: -4.5em;
+            font-size:3rem;
+            letter-spacing:3px;
+        }
+    }
+    .link-testimonial {
+            font-size: 2.5rem;
+            position: relative;
+            bottom: -6em;
+            left: 11em;
+    }
+}
+
+/*==========================
+Media Queries Desktop Part 1
+============================*/
+@media screen and (min-width: 1024px) {
+    .testimonial {
+        min-width:1024px;
+        margin: auto;
+        p{
+            font-size: 4rem;
+            font-weight: light;
+            text-align: center;
+            line-height: 2em;
+            margin-top: -3em;
+            margin-bottom: -8em;
+        }
+    }
+    .image_testimonial {
+        width: 33%;
+        border-width: 12px;
+        transform: translateY(17em);
+    }
+    .footer-testimonial {
+        height: 45em; 
+        max-width:1024px;  
+        p {
+            font-size:5rem;
+            bottom: -4em;
+        }
+    }
+    .link-testimonial {
+            font-size: 5rem;
+            position: relative;
+            bottom: -4.5em;
+            left: 6.5em;
+    }
+}

@@ -1,0 +1,129 @@
+/*=======================
+Part 3 of the Assignment
+========================*/
+
+/*=====================
+Giving <h3> Some Space
+=======================*/
+.h3part3 {
+    transform:translateY(-190em);
+} 
+
+/*===================
+Variables and Mixins
+=====================*/
+$mobilePadding:20px;
+$mobileWidth:25em;
+$iconPaddingright:1em;
+
+@mixin mobileSizes() {
+    padding:$mobilePadding;
+    width:$mobileWidth;
+}
+
+/*=================================================
+Setting Social Media Buttons, Colours and Positions
+===================================================*/
+.fa-laptop-code::before {
+    content:"\f5fc";
+    padding-right:$iconPaddingright;
+}
+.fa-twitter::before {
+    content:"\f099";
+    padding-right:$iconPaddingright;
+}
+.fa-linkedin-in::before {
+    content:"\f0e1";
+    padding-right:$iconPaddingright;
+}
+.fa-facebook-f::before {
+    content:"\f39e";
+    padding-right:$iconPaddingright;
+}
+.fa-github::before {
+    content:"\f09b";
+    padding-right:$iconPaddingright;
+}
+
+a .fa-solid, a .fa-brands {
+    padding-left:0.5em;
+ }
+.fa-laptop-code {
+    background-color:#e17b77;
+    @include mobileSizes();
+}
+.fa-twitter {
+    background-color:#00aced;
+    @include mobileSizes();
+}
+.fa-linkedin-in {
+    background-color:#007bb6;
+    @include mobileSizes();
+}
+.fa-facebook-f {
+    background-color:#3b5998;
+    @include mobileSizes();
+}
+.fa-github {
+    background-color:#333;
+    @include mobileSizes();
+}
+
+/*=========================
+Styling Social Media Links
+===========================*/
+.social-media {
+    border-style:hidden;
+    height:15em;
+    width:45em;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+
+    margin-top:-470em;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    
+    
+}
+
+.medialink {
+    font-family:'Karla', sans-serif;
+    font-style:normal;
+    color:white;
+    font-size:8px;
+    letter-spacing:1px;
+    font-weight:lighter;
+    text-decoration:none;
+    overflow:hidden;
+
+    display:flex;
+    height:2em;
+    align-items:center; 
+    justify-items:flex-start;
+}
+
+/*=========================
+Adding Hover Style Changes
+===========================*/
+.medialink {
+    left:38em;
+    position:relative;
+}
+
+@keyframes hover {
+    from{transform:translateX(38em)}
+    to{transform:translateX(-20em)}
+   }
+   .medialink:hover {
+       cursor:pointer;
+       animation-name:hover;
+       animation-duration:1000ms;
+       animation-fill-mode:forwards;
+   }
+   
+
+
+
+

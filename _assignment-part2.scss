@@ -1,0 +1,112 @@
+/*=======================
+Part 2 of the Assignment
+========================*/
+
+/*=====================
+Giving <h3> Some Space
+=======================*/
+.h3part2 {
+    padding-top:1em;
+    margin-bottom:-20em;
+}
+
+/*===================
+Variables and Mixins
+=====================*/
+$fontFam:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$borderRadius:1em;
+
+@mixin fontfamWeight() {
+    font-weight:bold;
+    font-family:$fontFam;
+}
+
+/*================================================
+Creating the Grid with the Background and Buttons
+==================================================*/
+body {
+    overflow-x: hidden;
+}
+
+.portfolio {   
+    min-width:320px;
+    width:100%;
+    height:850em;
+    list-style-type:none;
+    display:flex;
+    flex-direction:column;
+    gap:2rem; 
+    justify-content:center;
+    overflow:hidden;
+        /*====================================
+        Creating Black Background with Button
+        ======================================*/
+        & .blackbg {
+            width:34.7em;
+            height:38.5em;
+            background-color: rgb(17, 27, 61);
+            border-style:none;
+            border-radius:$borderRadius;
+            position:relative;
+            z-index:1;
+            .button {
+                width:10em;
+                height:2.5em;
+                background:white;
+                border-style:none;
+                border-radius:3px;
+                @include fontfamWeight(); 
+                position:absolute;
+                top: 13em;
+                left: 8.5em;
+            }
+        }       
+        /*=====================
+        Creating Hover Effect
+        =======================*/
+        & .image:hover {
+        opacity:0;
+        }
+}
+
+/*=================
+Styling the Images
+===================*/       
+ul li img {
+    max-width:100%;
+    border-radius:$borderRadius;
+    position:relative;
+    z-index:20;
+    margin-blocK:0.5em;
+}
+
+/*================================
+Positioning Images and Background
+==================================*/
+li:nth-child(10) {
+    top:-377em;
+}
+li:nth-child(11){
+    top:-376em;
+} 
+li:nth-child(12) {
+    top:-374em;
+}
+li:nth-child(13) {
+    top:-373em;
+}
+li:nth-child(14) {
+    top:-371em;
+}
+li:nth-child(15) {
+    top:-370em;
+}
+li:nth-child(16) {
+    top:-368em;
+}
+li:nth-child(8),
+li:nth-child(9),
+li:nth-child(17),
+li:nth-child(18) {
+    opacity:0;
+}

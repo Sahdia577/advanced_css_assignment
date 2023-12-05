@@ -1,0 +1,737 @@
+/*================================
+Resetting and Styling entire page
+=================================*/
+@import "/scss/fontawesome.css";
+@import "/scss/solid.css";
+@import "/scss/brands.css";
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,200&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+html {
+  color-scheme: dark light;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 1000vh;
+  background: #c3cfe2;
+}
+body h1, body h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-block: 2em;
+}
+body img, body picture, body svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*=======================
+Part 1 of the Assignment
+========================*/
+/*===================
+Variables and Mixins
+=====================*/
+/*================
+Creating the Card
+==================*/
+.testimonial {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px;
+  background: #fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  /*====================
+  Styling the Paragraph
+  ======================*/
+}
+.testimonial p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(54, 52, 52);
+  max-width: 45ch;
+  line-height: 2em;
+  padding: 3em;
+  margin-bottom: -7em;
+}
+
+/*================
+Styling the Image
+==================*/
+.image_testimonial {
+  width: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  border-radius: 50%;
+  transform: translateY(10.5em);
+}
+
+/*=================
+Styling the Footer
+===================*/
+.footer-testimonial {
+  background-color: #686de0;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 100%;
+  height: 30vh;
+  padding: 9px;
+  /*===========================
+  Styling the Footer Paragraph
+  =============================*/
+}
+.footer-testimonial p {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: relative;
+  bottom: -7em;
+}
+
+/*===============
+Styling the Link
+=================*/
+.link-testimonial {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dadae5;
+  position: relative;
+  bottom: -7.5em;
+  left: 10.5em;
+}
+
+/*==========================
+Media Queries Tablet Part 1
+============================*/
+@media screen and (min-width: 768px) {
+  .testimonial {
+    width: 100%;
+    width: 768px;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+  }
+  .testimonial p {
+    font-size: 3rem;
+    margin-top: -2em;
+    margin-bottom: -8em;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 4em;
+  }
+  .image_testimonial {
+    width: 30%;
+    border-width: 8px;
+    transform: translateY(12em);
+  }
+  .footer-testimonial {
+    max-width: 768px;
+    height: 30em;
+  }
+  .footer-testimonial p {
+    position: relative;
+    bottom: -4.5em;
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  .link-testimonial {
+    font-size: 2.5rem;
+    position: relative;
+    bottom: -6em;
+    left: 11em;
+  }
+}
+/*==========================
+Media Queries Desktop Part 1
+============================*/
+@media screen and (min-width: 1024px) {
+  .testimonial {
+    min-width: 1024px;
+    margin: auto;
+  }
+  .testimonial p {
+    font-size: 4rem;
+    font-weight: light;
+    text-align: center;
+    line-height: 2em;
+    margin-top: -3em;
+    margin-bottom: -8em;
+  }
+  .image_testimonial {
+    width: 33%;
+    border-width: 12px;
+    transform: translateY(17em);
+  }
+  .footer-testimonial {
+    height: 45em;
+    max-width: 1024px;
+  }
+  .footer-testimonial p {
+    font-size: 5rem;
+    bottom: -4em;
+  }
+  .link-testimonial {
+    font-size: 5rem;
+    position: relative;
+    bottom: -4.5em;
+    left: 6.5em;
+  }
+}
+/*=======================
+Part 2 of the Assignment
+========================*/
+/*=====================
+Giving <h3> Some Space
+=======================*/
+.h3part2 {
+  padding-top: 1em;
+  margin-bottom: -20em;
+}
+
+/*================================================
+Creating the Grid with the Background and Buttons
+==================================================*/
+body {
+  overflow-x: hidden;
+}
+
+.portfolio {
+  min-width: 320px;
+  width: 100%;
+  height: 850em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  overflow: hidden;
+  /*====================================
+  Creating Black Background with Button
+  ======================================*/
+  /*=====================
+  Creating Hover Effect
+  =======================*/
+}
+.portfolio .blackbg {
+  width: 34.7em;
+  height: 38.5em;
+  background-color: rgb(17, 27, 61);
+  border-style: none;
+  border-radius: 1em;
+  position: relative;
+  z-index: 1;
+}
+.portfolio .blackbg .button {
+  width: 10em;
+  height: 2.5em;
+  background: white;
+  border-style: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 13em;
+  left: 8.5em;
+}
+.portfolio .image:hover {
+  opacity: 0;
+}
+
+/*=================
+Styling the Images
+===================*/
+ul li img {
+  max-width: 100%;
+  border-radius: 1em;
+  position: relative;
+  z-index: 20;
+  margin-blocK: 0.5em;
+}
+
+/*================================
+Positioning Images and Background
+==================================*/
+li:nth-child(10) {
+  top: -377em;
+}
+
+li:nth-child(11) {
+  top: -376em;
+}
+
+li:nth-child(12) {
+  top: -374em;
+}
+
+li:nth-child(13) {
+  top: -373em;
+}
+
+li:nth-child(14) {
+  top: -371em;
+}
+
+li:nth-child(15) {
+  top: -370em;
+}
+
+li:nth-child(16) {
+  top: -368em;
+}
+
+li:nth-child(8),
+li:nth-child(9),
+li:nth-child(17),
+li:nth-child(18) {
+  opacity: 0;
+}
+
+/*============================
+Adjusting the Grid for Tablet
+=============================*/
+@media screen and (min-width: 768px) {
+  .h3part2 {
+    margin-bottom: -1em;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .image:hover {
+    opacity: 0;
+  }
+  .portfolio {
+    width: 768px;
+    width: 100%;
+    height: 350em;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 80px;
+    margin-left: 3em;
+  }
+  /*====================================
+  Adjusting Black Background with Button
+  ======================================*/
+  .blackbg {
+    max-width: 28.7em;
+    max-height: 31.5em;
+    top: -36em;
+    left: -3em;
+    position: relative;
+    margin-block: 1.3em;
+  }
+  .blackbg .button {
+    max-width: 9em;
+    max-height: 2.2em;
+    margin-left: -2em;
+    margin-top: -2em;
+  }
+  /*=================
+  Adjusting the Images
+  ===================*/
+  ul li img {
+    margin: -3em;
+    margin-block: 1em;
+  }
+  /*================================
+  Repositioning Images and Background
+  ==================================*/
+  li:nth-child(11),
+  li:nth-child(12),
+  li:nth-child(13),
+  li:nth-child(14),
+  li:nth-child(15),
+  li:nth-child(16) {
+    top: -187em;
+  }
+  li:nth-child(8),
+  li:nth-child(9),
+  li:nth-child(18) {
+    opacity: 0;
+  }
+  li:nth-child(17) {
+    opacity: 1;
+    top: -186em;
+  }
+}
+/*=============================
+Adjusting the Grid for Desktop
+==============================*/
+@media screen and (min-width: 1024px) {
+  .h3part2 {
+    margin-bottom: -8em;
+  }
+  .portfolio {
+    width: 1024px;
+    width: 100%;
+    height: auto;
+    padding: 250px;
+  }
+  /*=====================================
+  Adjusting Black Background with Button
+  ======================================*/
+  .blackbg {
+    max-width: 26.4em;
+    max-height: 29.5em;
+  }
+  .blackbg .button {
+    max-width: 9em;
+    max-height: 2.2em;
+    margin-left: -2.5em;
+    margin-top: -3em;
+  }
+  /*==================
+  Adjusting the Images
+  ===================*/
+  ul li img {
+    margin: -4em;
+    margin-block: 2em;
+  }
+  /*==============================
+  Adjusting Images and Background
+  ================================*/
+  li:nth-child(10),
+  li:nth-child(11),
+  li:nth-child(12) {
+      top:-71em;
+      left:-4.2em;
+  }
+  li:nth-child(13) {
+    opacity:0;
+  }
+  li:nth-child(14),
+  li:nth-child(15),
+  li:nth-child(16) {
+    top:-71em;
+    left:-38.2em;
+  }
+  li:nth-child(17) {
+    top:-141em;
+    left:-21.2em;
+    opacity:1;
+  }
+
+}
+
+/*=======================
+Part 3 of the Assignment
+========================*/
+/*=====================
+Giving <h3> Some Space
+=======================*/
+.h3part3 {
+  transform: translateY(-190em);
+}
+
+/*===================
+Variables and Mixins
+=====================*/
+/*=================================================
+Setting Social Media Buttons, Colours and Positions
+===================================================*/
+.fa-laptop-code::before {
+  content: "\f5fc";
+  padding-right: 1em;
+}
+
+.fa-twitter::before {
+  content: "\f099";
+  padding-right: 1em;
+}
+
+.fa-linkedin-in::before {
+  content: "\f0e1";
+  padding-right: 1em;
+}
+
+.fa-facebook-f::before {
+  content: "\f39e";
+  padding-right: 1em;
+}
+
+.fa-github::before {
+  content: "\f09b";
+  padding-right: 1em;
+}
+
+a .fa-solid, a .fa-brands {
+  padding-left: 0.5em;
+}
+
+.fa-laptop-code {
+  background-color: #e17b77;
+  padding: 20px;
+  width: 24em;
+}
+
+.fa-twitter {
+  background-color: #00aced;
+  padding: 20px;
+  width: 24em;
+}
+
+.fa-linkedin-in {
+  background-color: #007bb6;
+  padding: 20px;
+  width: 24em;
+}
+
+.fa-facebook-f {
+  background-color: #3b5998;
+  padding: 20px;
+  width: 24em;
+}
+
+.fa-github {
+  background-color: #333;
+  padding: 20px;
+  width: 24em;
+}
+
+/*=========================
+Styling Social Media Links
+===========================*/
+.social-media {
+  border-style: hidden;
+  height: 15em;
+  width: 45em;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin-top: -470em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.medialink {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  color: white;
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  height: 2em;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+/*=========================
+Adding Hover Style Changes
+===========================*/
+.medialink {
+  left: 38em;
+  position: relative;
+}
+
+@-webkit-keyframes hover {
+  from {
+    transform: translateX(38em);
+  }
+  to {
+    transform: translateX(-20em);
+  }
+}
+
+@keyframes hover {
+  from {
+    transform: translateX(38em);
+  }
+  to {
+    transform: translateX(-20em);
+  }
+}
+.medialink:hover {
+  cursor: pointer;
+  -webkit-animation-name: hover;
+          animation-name: hover;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*=========================================
+Adjusting Social Media Buttons for Tablet
+==========================================*/
+@media screen and (min-width: 768px) {
+  /*=============
+  Adjusting <h3>
+  ================*/
+  .h3part3 {
+    transform: translateY(-70em);
+  }
+  /*===================
+  Variables and Mixins
+  =====================*/
+  /*=============================
+  Adjusting Social Media Buttons
+  ===============================*/
+  .social-media {
+    height: 15em;
+    width: 60em;
+    margin-top: -160em;
+  }
+  .fa-laptop-code {
+    padding: 30px;
+    width: 25em;
+  }
+  .fa-twitter {
+    padding: 30px;
+    width: 25em;
+  }
+  .fa-linkedin-in {
+    padding: 30px;
+    width: 25em;
+  }
+  .fa-facebook-f {
+    padding: 30px;
+    width: 25em;
+  }
+  .fa-github {
+    padding: 30px;
+    width: 25em;
+  }
+  /*=============================
+  Adjusting Link and Hover Style
+  ===============================*/
+  .medialink {
+    left: 43.7em;
+    font-size: 9px;
+    height: 2.5em;
+  }
+  @-webkit-keyframes hover {
+    from {
+      transform: translateX(43.7em);
+    }
+    to {
+      transform: translateX(-20em);
+    }
+  }
+  @keyframes hover {
+    from {
+      transform: translateX(43.7em);
+    }
+    to {
+      transform: translateX(-20em);
+    }
+  }
+  .medialink:hover {
+    -webkit-animation-name: hover;
+            animation-name: hover;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+  }
+}
+/*=========================================
+Adjusting Social Media Buttons for Desktop
+==========================================*/
+@media screen and (min-width: 1024px) {
+  /*=============
+  Adjusting <h3>
+  ================*/
+  .h3part3 {
+    transform: translateY(-45em);
+  }
+  /*===================
+  Variables and Mixins
+  =====================*/
+  /*=============================
+  Adjusting Social Media Buttons
+  ===============================*/
+  .social-media {
+    height: 20em;
+    width: 150em;
+    margin-top: -95em;
+  }
+  .fa-laptop-code {
+    padding: 25px;
+    width: 25em;
+  }
+  .fa-twitter {
+    padding: 25px;
+    width: 25em;
+  }
+  .fa-linkedin-in {
+    padding: 25px;
+    width: 25em;
+  }
+  .fa-facebook-f {
+    padding: 25px;
+    width: 25em;
+  }
+  .fa-github {
+    padding: 25px;
+    width: 25em;
+  }
+  .fa-laptop-code::before {
+    padding-right: 2em;
+    padding-left: 0.8em;
+  }
+  .fa-twitter::before {
+    padding-right: 2em;
+    padding-left: 1em;
+  }
+  .fa-linkedin-in::before {
+    padding-right: 2em;
+    padding-left: 1em;
+  }
+  .fa-facebook-f::before {
+    padding-right: 2em;
+    padding-left: 1em;
+  }
+  .fa-github::before {
+    padding-right: 2em;
+    padding-left: 0.8em;
+  }
+  /*=============================
+  Adjusting Link and Hover Style
+  ===============================*/
+  .medialink {
+    left: 84em;
+    font-size: 10px;
+    height: 3em;
+  }
+  @-webkit-keyframes hover {
+    from {
+      transform: translateX(84em);
+    }
+    to {
+      transform: translateX(-20em);
+    }
+  }
+  @keyframes hover {
+    from {
+      transform: translateX(84em);
+    }
+    to {
+      transform: translateX(-20em);
+    }
+  }
+  .medialink:hover {
+    -webkit-animation-name: hover;
+            animation-name: hover;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+  }
+}/*# sourceMappingURL=style.css.map */  

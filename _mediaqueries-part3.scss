@@ -1,0 +1,153 @@
+/*=========================================
+Adjusting Social Media Buttons for Tablet
+==========================================*/
+@media screen and (min-width: 768px) {
+    /*=============
+    Adjusting <h3>
+    ================*/
+    .h3part3 {
+        transform:translateY(-70em);
+    } 
+
+    /*===================
+    Variables and Mixins
+    =====================*/
+    $tabletPadding:30px;
+    $tabletWidth:25em;
+
+    @mixin tabletSizes() {
+        padding:$tabletPadding;
+        width:$tabletWidth;
+    }
+
+    /*=============================
+    Adjusting Social Media Buttons
+    ===============================*/
+    .social-media {
+        height:15em;
+        width:60em;
+        margin-top:-160em;
+    }
+
+    .fa-laptop-code {
+        @include tabletSizes();
+    }
+    .fa-twitter {
+        @include tabletSizes();
+    }
+    .fa-linkedin-in {
+        @include tabletSizes();
+    }
+    .fa-facebook-f {
+        @include tabletSizes();
+    }
+    .fa-github {
+        @include tabletSizes();
+    }
+
+    /*=============================
+    Adjusting Link and Hover Style
+    ===============================*/
+    .medialink {
+        left:43.7em;
+        font-size:9px;
+        height:2.5em;
+    }
+    
+    @keyframes hover {
+        from{transform:translateX(43.7em)}
+        to{transform:translateX(-20em)}
+       }
+       .medialink:hover {
+           animation-name:hover;
+           animation-duration:1000ms;
+       }
+}
+
+
+/*=========================================
+Adjusting Social Media Buttons for Desktop
+==========================================*/
+@media screen and (min-width: 1024px) {
+    /*=============
+    Adjusting <h3>
+    ================*/
+    .h3part3 {
+        transform:translateY(-45em);
+    } 
+
+    /*===================
+    Variables and Mixins
+    =====================*/
+    $desktopPadding:25px;
+    $desktopWidth:30em;
+    $desktopRightpadding:2em;
+
+    @mixin desktopSizes() {
+        padding:$desktopPadding;
+        width:$desktopWidth;
+    }
+
+    /*=============================
+    Adjusting Social Media Buttons
+    ===============================*/
+    .social-media {
+        height: 20em;
+        width: 150em;
+        margin-top:-95em;
+    }
+    .fa-laptop-code {
+        @include desktopSizes();
+    }
+    .fa-twitter {
+        @include desktopSizes();
+    }
+    .fa-linkedin-in {
+        @include desktopSizes();
+    }
+    .fa-facebook-f {
+        @include desktopSizes();
+    }
+    .fa-github {
+        @include desktopSizes();
+    }
+
+    .fa-laptop-code::before {
+        padding-right:$desktopRightpadding;
+        padding-left:0.8em;
+    }
+    .fa-twitter::before {
+        padding-right:$desktopRightpadding;
+        padding-left:1em;
+    }
+    .fa-linkedin-in::before {
+        padding-right:$desktopRightpadding;
+        padding-left:1em;
+    }
+    .fa-facebook-f::before {
+        padding-right:$desktopRightpadding;
+        padding-left:1em;
+    }
+    .fa-github::before {
+        padding-right:$desktopRightpadding;
+        padding-left:0.8em;
+    }
+
+    /*=============================
+    Adjusting Link and Hover Style
+    ===============================*/
+    .medialink {
+        left:84em;
+        font-size:10px;
+        height:3em;
+    }
+
+    @keyframes hover {
+        from{transform:translateX(84em)}
+        to{transform:translateX(-20em)}
+    }
+       .medialink:hover {
+           animation-name:hover;
+           animation-duration:1000ms;
+    }
+}
