@@ -36,6 +36,9 @@ body img, body picture, body svg {
 /*=======================
 Part 1 of the Assignment
 ========================*/
+/*=======================
+Part 1 of the Assignment
+========================*/
 /*===================
 Variables and Mixins
 =====================*/
@@ -198,6 +201,9 @@ Media Queries Desktop Part 1
 /*=======================
 Part 2 of the Assignment
 ========================*/
+/*=======================
+Part 2 of the Assignment
+========================*/
 /*=====================
 Giving <h3> Some Space
 =======================*/
@@ -206,6 +212,9 @@ Giving <h3> Some Space
   margin-bottom: -20em;
 }
 
+/*===================
+Variables and Mixins
+=====================*/
 /*================================================
 Creating the Grid with the Background and Buttons
 ==================================================*/
@@ -307,7 +316,7 @@ li:nth-child(18) {
 /*============================
 Adjusting the Grid for Tablet
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .h3part2 {
     margin-bottom: -1em;
   }
@@ -379,7 +388,7 @@ Adjusting the Grid for Desktop
     margin-bottom: -8em;
   }
   .portfolio {
-    width: 1024px;
+    width: 769px;
     width: 100%;
     height: auto;
     padding: 250px;
@@ -407,29 +416,39 @@ Adjusting the Grid for Desktop
   /*==============================
   Adjusting Images and Background
   ================================*/
-  li:nth-child(10),
-  li:nth-child(11),
-  li:nth-child(12) {
-      top:-71em;
-      left:-4.2em;
+  /*nth-child isn't working, so for size 1024 I added this
+  code below before adjusting top position*/
+  .portfolio .blackbg {
+    position: relative;
+    top: -107em;
+    left: -4em;
   }
-  li:nth-child(13) {
-    opacity:0;
+  /*the above only works for the first row, so for the others
+  I used id to adjust them one by one
+    on some of the blackbg*/
+  .portfolio #fourteen, #fifteen {
+    position: relative;
+    top: -105em;
+    left: -37em;
   }
-  li:nth-child(14),
-  li:nth-child(15),
-  li:nth-child(16) {
-    top:-71em;
-    left:-38.2em;
+  .portfolio #sixteen {
+    position: relative;
+    top: -139em;
+    left: 62em;
   }
-  li:nth-child(17) {
-    top:-141em;
-    left:-21.2em;
-    opacity:1;
+  .portfolio #seventeen {
+    position: relative;
+    top: -103em;
+    left: -37em;
   }
-
+  .portfolio #thirteen {
+    position: relative;
+    opacity: 0;
+  }
 }
-
+/*=======================
+Part 3 of the Assignment
+========================*/
 /*=======================
 Part 3 of the Assignment
 ========================*/
@@ -478,31 +497,31 @@ a .fa-solid, a .fa-brands {
 .fa-laptop-code {
   background-color: #e17b77;
   padding: 20px;
-  width: 24em;
+  width: 25em;
 }
 
 .fa-twitter {
   background-color: #00aced;
   padding: 20px;
-  width: 24em;
+  width: 25em;
 }
 
 .fa-linkedin-in {
   background-color: #007bb6;
   padding: 20px;
-  width: 24em;
+  width: 25em;
 }
 
 .fa-facebook-f {
   background-color: #3b5998;
   padding: 20px;
-  width: 24em;
+  width: 25em;
 }
 
 .fa-github {
   background-color: #333;
   padding: 20px;
-  width: 24em;
+  width: 25em;
 }
 
 /*=========================
@@ -540,17 +559,8 @@ Styling Social Media Links
 Adding Hover Style Changes
 ===========================*/
 .medialink {
-  left: 38em;
+  left: 38.5em;
   position: relative;
-}
-
-@-webkit-keyframes hover {
-  from {
-    transform: translateX(38em);
-  }
-  to {
-    transform: translateX(-20em);
-  }
 }
 
 @keyframes hover {
@@ -563,12 +573,9 @@ Adding Hover Style Changes
 }
 .medialink:hover {
   cursor: pointer;
-  -webkit-animation-name: hover;
-          animation-name: hover;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: hover;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
 }
 
 /*=========================================
@@ -620,14 +627,6 @@ Adjusting Social Media Buttons for Tablet
     font-size: 9px;
     height: 2.5em;
   }
-  @-webkit-keyframes hover {
-    from {
-      transform: translateX(43.7em);
-    }
-    to {
-      transform: translateX(-20em);
-    }
-  }
   @keyframes hover {
     from {
       transform: translateX(43.7em);
@@ -637,10 +636,8 @@ Adjusting Social Media Buttons for Tablet
     }
   }
   .medialink:hover {
-    -webkit-animation-name: hover;
-            animation-name: hover;
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
+    animation-name: hover;
+    animation-duration: 1000ms;
   }
 }
 /*=========================================
@@ -666,23 +663,23 @@ Adjusting Social Media Buttons for Desktop
   }
   .fa-laptop-code {
     padding: 25px;
-    width: 25em;
+    width: 30em;
   }
   .fa-twitter {
     padding: 25px;
-    width: 25em;
+    width: 30em;
   }
   .fa-linkedin-in {
     padding: 25px;
-    width: 25em;
+    width: 30em;
   }
   .fa-facebook-f {
     padding: 25px;
-    width: 25em;
+    width: 30em;
   }
   .fa-github {
     padding: 25px;
-    width: 25em;
+    width: 30em;
   }
   .fa-laptop-code::before {
     padding-right: 2em;
@@ -708,17 +705,9 @@ Adjusting Social Media Buttons for Desktop
   Adjusting Link and Hover Style
   ===============================*/
   .medialink {
-    left: 84em;
+    left: 83em;
     font-size: 10px;
     height: 3em;
-  }
-  @-webkit-keyframes hover {
-    from {
-      transform: translateX(84em);
-    }
-    to {
-      transform: translateX(-20em);
-    }
   }
   @keyframes hover {
     from {
@@ -729,9 +718,7 @@ Adjusting Social Media Buttons for Desktop
     }
   }
   .medialink:hover {
-    -webkit-animation-name: hover;
-            animation-name: hover;
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
+    animation-name: hover;
+    animation-duration: 1000ms;
   }
-}/*# sourceMappingURL=style.css.map */  
+}/*# sourceMappingURL=style.css.map */

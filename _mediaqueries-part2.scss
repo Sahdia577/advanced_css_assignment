@@ -1,7 +1,7 @@
 /*============================
 Adjusting the Grid for Tablet
 =============================*/
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .h3part2 {
         margin-bottom:-1em;
     }
@@ -75,7 +75,7 @@ Adjusting the Grid for Desktop
         margin-bottom:-8em;
     }
     .portfolio {
-    width:1024px;
+    width:769px;
     width:100%;
     height:auto;
     padding:250px;    
@@ -103,57 +103,37 @@ Adjusting the Grid for Desktop
     /*==============================
     Adjusting Images and Background
     ================================*/
-    li:nth-child(10),
-    li:nth-child(11),
-    li:nth-child(12){
+    /*nth-child isn't working, so for size 1024 I added this
+    code below before adjusting top position*/
+    .portfolio .blackbg {
+        position:relative;
         top:-107em;
         left:-4em;
     }
-    li:nth-child(13) {
-        top:-105em;
-        left:-4em;
+    /*the above only works for the first row, so for the others
+    I used id to adjust them one by one
+      on some of the blackbg*/
+    .portfolio #fourteen, #fifteen {
+        position:relative;
+        top: -105em;
+        left:-37em;
     }
-    li:nth-child(14),
-    li:nth-child(15) {
-        top:-105em;
-        left:-4em;
+    .portfolio #sixteen {
+        position:relative;
+        top: -139em;
+        left: 62em;
     }
-    li:nth-child(16) {
-        top:-103em;
-        left:-4em;
+    .portfolio #seventeen {
+        position:relative;
+        top: -103em;
+        left: -37em;
     }
-    li:nth-child(17) {
+
+    .portfolio #thirteen {
+        position:relative;
         opacity:0;
     }
 }
 
-/*====================================
-Adjusting the Grid for Larger Desktop
-=====================================*/
-@media screen and (min-width:1281px) {
-    /*==============================
-    Adjusting Images and Background
-    ================================*/
-    li:nth-child(10),
-    li:nth-child(11),
-    li:nth-child(12) {
-        top:-71em;
-        left:-4.2em;
-    }
-    li:nth-child(13) {
-      opacity:0;
-    }
-    li:nth-child(14),
-    li:nth-child(15),
-    li:nth-child(16) {
-      top:-71em;
-      left:-38.2em;
-    }
-    li:nth-child(17) {
-      top:-141em;
-      left:-21.2em;
-      opacity:1;
-    }
-  }
-
+ 
 
